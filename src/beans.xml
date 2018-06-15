@@ -32,7 +32,7 @@
 	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
-		<property name="url" value="jdbc:mysql://localhost:3306/love_letter" />
+		<property name="url" value="jdbc:mysql://localhost:3306/love_letter;characterEncoding=UTF-8" />
 		<property name="username" value="root" />
 		<property name="password" value="DKOLChina2016" />
 	</bean>
@@ -45,6 +45,7 @@
 		<property name="mapperLocations">
 			<list>
 				<value>classpath:com/love/mapper/LetterMapper.xml</value>
+				<value>classpath:com/love/mapper/UserMapper.xml</value>
 			</list>
 		</property>
 	</bean>
@@ -54,6 +55,10 @@
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
 		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
 		<property name="basePackage" value="com.love.mapper" />
+	</bean>
+	
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="2097152"></property>
 	</bean>
 
 	<!-- 事务管理器 -->

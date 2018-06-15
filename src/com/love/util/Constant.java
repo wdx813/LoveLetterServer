@@ -13,4 +13,7 @@ public class Constant {
 	public static final int letter_type_family = 1;
 	public static final int letter_type_love = 2;
 	public static final int letter_type_myself = 3;
+	
+	public static final int SEND_LETTER = 1;
+	public static final int RECEIVER_LETTER = 2;
 }

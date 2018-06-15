@@ -62,4 +62,10 @@ public class LetterServiceImpl implements LetterService {
 	public Letter findLetterById(Integer letterId) {
 		return letterMapper.findLetterById(letterId);
 	}
+
+	@Override
+	public Letter getRecommend(Integer userId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

@@ -2,9 +2,9 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.love.mapper.LetterMapper">
 	<select id="findLetters" resultType="com.love.entity.Letter" parameterType="Integer">
-		select * from t_letter where is_system = 1 and type = #{0} limit #{1}
+		select * from t_letter_template where type = #{0} limit #{1}
 	</select>
 	<select id="findLetterById" resultType="com.love.entity.Letter">
-		select * from t_letter where id = #{letterId}
+		select * from t_letter_template where id = #{letterId}
 	</select>
 </mapper>

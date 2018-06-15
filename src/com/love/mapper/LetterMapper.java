@@ -8,4 +8,5 @@ public interface LetterMapper {
 
 	public List<Letter> findLetters(int letterType, int pageSize);
 	public Letter findLetterById(Integer letterId);
+	public Letter getRecommendLetter(Integer userId);
 }
